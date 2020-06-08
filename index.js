@@ -1,9 +1,10 @@
 const express = require('express');
 const axios = require('axios');
 const redis = require('redis');
+require('dotenv').config();
 const responseTime = require('response-time');
 const PORT = process.env.PORT || 5000;
-const REDIS_PORT = process.env.PORT || 6379;
+const REDIS_PORT = process.env.REDIS_PORT || 6379;
 
 const client = redis.createClient(REDIS_PORT);
 
